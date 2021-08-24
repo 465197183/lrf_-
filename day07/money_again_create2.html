@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网上银行-个人存款在线计算器</title>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+			 
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+			 
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			//定义一个函数，完成存款的计算
+			function calc() {
+					// 一开始处，做表单验证，看输入的是不是数字
+					
+					
+					//1.获取存款金额（读取文本框中用户输入的数字）
+					var cunkuanjine = document.getElementById("amount").value;
+					//定义一个正则表达式（规则表达式），假设我们要求存款金额最多是6位数字
+					var regExp=/^[0-9]{2,6}$/;
+					if(!regExp.test(cunkuanjine)) {
+						//能到此处，说明用户输入不合法
+						document.getElementById("amount").value="输入不合法！ 必须是2-6位数字！！"
+						document.getElementById("amount").style="color:red";
+						return ;
+					}
+					//上面那句话取到的值是："8000"，是数字吗？能做运算吗？
+					//"8000"-->8000
+					var cunkuanjine=parseInt(cunkuanjine);//把字符串转成数字
+					//2.开始计算
+					//取得年利率
+					var lilv=document.getElementById("year").value;
+					var lixi=cunkuanjine*lilv;//利息
+					var total=cunkuanjine+lixi;//本息合计
+					//3.把计算的结果写入文本框，用户就能看到
+					document.getElementById("lixi").value=lixi;
+					document.getElementById("total").value=total;
+			}
+			function clearContent() {
+				document.getElementById("amount").value='';
+				document.getElementById("amount").style="color:black";
+			}
+ 		</script>
+	</head>
+	<body>
+		<div class="container text-center" >
+			<h1 align="center">个人网银-个人存款计算</h1>
+			<table class="table table-bordered text-center" > 
+				<tr class="bg-primary">
+					<td colspan="2">个人存款计算器</td>
+				</tr>
+				<tr>
+					<td>存款金额</td>
+					<td>
+						<input  onfocus="clearContent()"  class="form-control" type="text"  placeholder="请输入存款金额" id="amount">
+						
+					</td>
+				</tr>
+				<tr>
+					<td>存款年限</td>
+					<td>
+						<select id="year" class="form-control">
+							<option value="0.0175">一年(1.75%)</option>
+							<option value="0.045">二年(2.25%)</option>
+							<option value="0.0825">三年(2.75%)</option>
+							<option value="0.1375">五年(2.75%)</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>所得利息</td>
+					<td>
+						<input type="text" class="form-control" readonly="readonly" id="lixi">
+					</td>
+				</tr>
+				
+				<tr>
+					<td >本息合计</td>
+					
+					<td>
+						<input type="text" class="form-control " readonly="readonly" id="total">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<button onclick="calc()" class=" btn btn-primary btn-block ">计算</button>
+					</td>
+				</tr>
+			</table>
+			开发者信息：2013040419 刘瑞飞 中北大学 软件学院 2020级
+		</div>
+	</body>
+</html>
