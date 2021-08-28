@@ -1,0 +1,237 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/select.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+				$(".select4").uedSelect({
+					width: 160
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">查询成员</a></li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+
+
+
+
+			<div id="tab2" class="tabson">
+
+
+				<ul class="seachform">
+
+					<li><label>姓名</label><input name="" type="text" class="scinput2" /></li>
+					<li><label>院系</label>
+						<div class="vocation">
+							<select class="select4">
+								<option>机电工程学院</option>
+								<option>机械工程学院</option>
+								<option>材料科学与工程学院</option>
+								<option>化学工程与技术学院</option>
+								<option>信息与通信工程学院</option>
+								<option>仪器与电子学院</option>
+								<option>大数据学院</option>
+								<option>理学院</option>
+								<option>经济与管理学院</option>
+								<option>人文社会科学学院</option>
+								<option>体育学院</option>
+								<option>艺术学院</option>
+								<option>软件学院</option>
+								<option>环境与安全工程学院</option>
+								<option>电气与控制工程学院</option>
+								<option>能源动力工程学院</option>
+								<option>马克思主义学院</option>
+							</select>
+						</div>
+					</li>
+
+					<li><label>年级</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>2018级</option>
+								<option>2019级</option>
+								<option>2020级</option>
+								<option>2021级</option>
+							</select>
+						</div>
+					</li>
+
+					<li><label>电话</label><input name="" type="text" class="scinput2" /></li>
+					<li><label>专业</label><input name="" type="text" class="scinput2" /></li>
+					<li><label>状态</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>正常</option>
+								<option>退出</option>
+								<option>毕业</option>
+							</select>
+						</div>
+					</li>
+					<li><label>是否担任管理职务</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>是</option>
+								<option>否</option>
+							</select>
+						</div>
+					</li>
+
+					<li><label>&nbsp;</label><input name="" type="button" class="scbtn" value="查询" /></li>
+
+				</ul>
+
+
+				<table class="tablelist">
+					<thead>
+						<tr>
+							<th><input name="" type="checkbox" value="" checked="checked" /></th>
+							<th>姓名<i class="sort"><img src="images/px.gif" /></i></th>
+							<th>年级</th>
+							<th>院系</th>
+							<th>电话</th>
+							<th>专业</th>
+							<th>状态</th>
+							<th>实验室职务</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小亮</td>
+							<td>2020级</td>
+							<td>软件学院</td>
+							<td>18836889988</td>
+							<td>软件工程</td>
+							<td>正常</td>
+							<td>项目经理</td>
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小红</td>
+							<td>2019级</td>
+							<td>大数据学院</td>
+							<td>18636686988</td>
+							<td>物联网工程</td>
+							<td>退出</td>
+							<td>组长</td>
+						
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小强</td>
+							<td>2019级</td>
+							<td>理学院</td>
+							<td>16836883688</td>
+							<td>应用数学</td>
+							<td>正常</td>
+							<td>技术总监</td>
+							
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小晨</td>
+							<td>2018级</td>
+							<td>仪器与电子学院</td>
+							<td>18686886968</td>
+							<td>电子信息工程</td>
+							<td>毕业</td>
+							<td>秘书长</td>
+							
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小凯</td>
+							<td>2020级</td>
+							<td>艺术学院</td>
+							<td>13656564436</td>
+							<td>视觉传达设计</td>
+							<td>退出</td>
+							<td>副秘书长</td>
+							
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小浩</td>
+							<td>2021级</td>
+							<td>体育学院</td>
+							<td>13864889988</td>
+							<td>运动训练</td>
+							<td>正常</td>
+							<td>组长</td>
+							
+						
+						</tr>
+					</tbody>
+				</table>
+
+
+
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			$("#usual1 ul").idTabs();
+		</script>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+
+
+
+
+
+		</div>
+
+
+	</body>
+
+</html>

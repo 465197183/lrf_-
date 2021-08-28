@@ -1,0 +1,178 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/select.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+				$(".select4").uedSelect({
+					width: 160
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">成员统计</a></li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+
+
+
+
+			<div id="tab2" class="tabson" align="center">
+
+
+					
+
+
+				<table class="tablelist">
+					<thead>
+						<tr>
+							<th><input name="" type="checkbox" value="" checked="checked" /></th>
+							<th>姓名<i class="sort"><img src="images/px.gif" /></i></th>
+							<th>年级</th>
+							<th>院系</th>
+							<th>电话</th>
+							<th>专业</th>
+							<th>状态</th>
+							<th>实验室职务</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小亮</td>
+							<td>2020级</td>
+							<td>软件学院</td>
+							<td>18836889988</td>
+							<td>软件工程</td>
+							<td>正常</td>
+							<td>项目经理</td>
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小红</td>
+							<td>2019级</td>
+							<td>大数据学院</td>
+							<td>18636686988</td>
+							<td>物联网工程</td>
+							<td>退出</td>
+							<td>组长</td>
+						
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小强</td>
+							<td>2019级</td>
+							<td>理学院</td>
+							<td>16836883688</td>
+							<td>应用数学</td>
+							<td>正常</td>
+							<td>技术总监</td>
+							
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小晨</td>
+							<td>2018级</td>
+							<td>仪器与电子学院</td>
+							<td>18686886968</td>
+							<td>电子信息工程</td>
+							<td>毕业</td>
+							<td>秘书长</td>
+							
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小凯</td>
+							<td>2020级</td>
+							<td>艺术学院</td>
+							<td>13656564436</td>
+							<td>视觉传达设计</td>
+							<td>退出</td>
+							<td>副秘书长</td>
+							
+						
+						</tr>
+						
+						<tr>
+							<td><input name="" type="checkbox" value="" /></td>
+							<td>小浩</td>
+							<td>2021级</td>
+							<td>体育学院</td>
+							<td>13864889988</td>
+							<td>运动训练</td>
+							<td>正常</td>
+							<td>组长</td>
+							
+						
+						</tr>
+					</tbody>
+				</table>
+
+				<br><li><label>&nbsp;</label><input  name="" type="button" class="btn" value="导出Excel" /><label>  &nbsp;  </label><input  name="" type="button" class="btn" value="eChart呈现" /></li>
+				
+
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			$("#usual1 ul").idTabs();
+		</script>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+
+
+
+
+
+		</div>
+
+
+	</body>
+
+</html>

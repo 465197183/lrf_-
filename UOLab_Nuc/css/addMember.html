@@ -1,0 +1,242 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/select.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script>
+
+		<script>
+			function checkUsername2() {
+				var uname = document.getElementById("username").value;
+				var unameTip = document.getElementById("usernameTip");
+				var reg = /^[\u4e00-\u9fa5]{2,5}$/; //2-5个汉字的正则表达式
+				if (!reg.test(uname)) {
+					unameTip.innerHTML = "用户名不合法!";
+					unameTip.style = "color:red";
+				} else {
+					unameTip.innerHTML = "";
+				}
+			}
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+				$(".select4").uedSelect({
+					width: 200
+				});
+
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">添加成员</a></li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+
+
+
+
+			<div id="tab1" class="tabson">
+				<ul class="forminfo">
+					<li>
+						<label>姓名<b>*</b></label>
+						<input onblur="checkUsername2()" id="username" placeholder="2-5个汉字" name="classid" type="text"
+							class="dfinput" style="width:345px;" />
+						<i id="usernameTip"></i>
+					</li>
+					<li>
+						<label>学号<b>*</b></label>
+						<input placeholder="请输入学号" name="Input" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>性别<b>*</b></label><cite>
+							<input name="sex" type="radio" value="" checked="checked" />男&nbsp;&nbsp;&nbsp;&nbsp;
+							<input name="sex" type="radio" value="" />女</cite>
+					</li>
+					<!--学校列表开始-->
+					</li>
+					<li><label>年级<b>*</b></label>
+						<div class="vocation">
+							<select class="select3">
+								<option>2018级</option>
+								<option>2019级</option>
+								<option>2020级</option>
+								<option>2021级</option>
+							</select>
+						</div>
+					</li>
+
+					<li><label>籍贯<b>*</b></label>
+						<div class="vocation">
+							<select class="select3">
+								<option>山西</option>
+								<option>河北</option>
+								<option>陕西</option>
+								<option>辽宁</option>
+								<option>广西</option>
+								<option>云南</option>
+								<option>山东</option>
+								<option>湖南</option>
+								<option>吉林</option>
+								<option>浙江</option>
+								<option>福建</option>
+								<option>湖北</option>
+								<option>广东</option>
+								<option>海南</option>
+								<option>四川</option>
+								<option>青海</option>
+								<option>黑龙江</option>
+								<option>安徽</option>
+								<option>江西</option>
+								<option>河南</option>
+								<option>贵州</option>
+							</select>
+						</div>
+					</li>
+
+					<li><label>院系<b>*</b></label>
+						<div class="vocation">
+							<select class="select4">
+								<option>机电工程学院</option>
+								<option>机械工程学院</option>
+								<option>材料科学与工程学院</option>
+								<option>化学工程与技术学院</option>
+								<option>信息与通信工程学院</option>
+								<option>仪器与电子学院</option>
+								<option>大数据学院</option>
+								<option>理学院</option>
+								<option>经济与管理学院</option>
+								<option>人文社会科学学院</option>
+								<option>体育学院</option>
+								<option>艺术学院</option>
+								<option>软件学院</option>
+								<option>环境与安全工程学院</option>
+								<option>电气与控制工程学院</option>
+								<option>能源动力工程学院</option>
+								<option>马克思主义学院</option>
+							</select>
+						</div>
+					</li>
+
+					<li>
+						<label>电话<b>*</b></label>
+						<input placeholder="请输入电话号码" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+
+					<li>
+						<label>专业<b>*</b></label>
+						<input placeholder="请输入专业名称" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+
+					<li><label>校内职务<b>*</b></label>
+						<div class="vocation">
+							<select class="select3">
+								<option>班干部</option>
+								<option>学生会干部</option>
+								<option>社团干部</option>
+								<option>无</option>
+							</select>
+						</div>
+					</li>
+
+
+
+					<li>
+						<label>加入日期<b>*</b></label>
+						<input name="classid" type="text" class="dfinput" style="width:50px;" /> 年
+						<input name="classid" type="text" class="dfinput" style="width:50px;" /> 月
+						<input name="classid" type="text" class="dfinput" style="width:50px;" /> 日
+					</li>
+
+					<li><label>状态<b>*</b></label>
+						<div class="vocation">
+							<select class="select3">
+								<option>正常</option>
+								<option>退出</option>
+								<option>毕业</option>
+							</select>
+						</div>
+					</li>
+
+					<li><label>实验室职务<b>*</b></label>
+						<div class="vocation">
+							<select class="select3">
+								<option>秘书长</option>
+								<option>副秘书长</option>
+								<option>技术总监</option>
+								<option>项目经理</option>
+								<option>组长</option>
+							</select>
+						</div>
+					</li>
+
+
+					<li><label>备注<b>*</b></label>
+
+
+						<textarea id="content7" name="content"
+							style="width:700px;height:250px;visibility:hidden;"></textarea>
+					</li>
+					<li><label>&nbsp;</label><input name="" type="button" class="btn" value="保存用户" /></li>
+				</ul>
+
+			</div>
+
+
+
+
+
+
+
+		</div>
+
+		</div>
+
+		<script type="text/javascript">
+			$("#usual1 ul").idTabs();
+		</script>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+
+
+
+
+
+		</div>
+
+
+	</body>
+
+</html>
